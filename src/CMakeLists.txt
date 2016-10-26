@@ -1,0 +1,1 @@
+add_executable(snake-server main.cpp)

@@ -1,13 +1,14 @@
 #include "main.hpp"
 
 using websocketpp::connection_hdl;
-typedef std::map<connection_hdl, PlayerData, std::owner_less<connection_hdl>> con_list;
-typedef websocketpp::server<websocketpp::config::asio> server;
 
 struct PlayerData {
-	int sessionid;
-	std::string name;
+        int sessionid;
+        std::string name;
 };
+
+typedef std::map<connection_hdl, PlayerData, std::owner_less<connection_hdl>> con_list;
+typedef websocketpp::server<websocketpp::config::asio> server;
 
 class SnakeServer {
 public:
